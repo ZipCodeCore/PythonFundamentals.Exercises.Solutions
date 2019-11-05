@@ -1,11 +1,14 @@
 from random import randrange
 
+
+def generate_random_number():
+    return randrange(10)
+
+
 def ask_for_input():
     guess = input("Give me a number\n")
     return int(guess)
 
-def generate_random_number():
-    return randrange(10)
 
 def evaluate(random_number, users_guess):
     if(users_guess == random_number):
