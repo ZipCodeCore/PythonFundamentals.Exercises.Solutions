@@ -10,9 +10,9 @@ def name_input(lang_choice):
 
     prompt = None
 
-    if(lang_choice == 2):
+    if lang_choice == 2:
         prompt = "¿Cómo te llamas?\n"
-    elif(lang_choice == 3):
+    elif lang_choice == 3:
         prompt = "Qual é o seu nome?\n"
     else:
         prompt = "What is your name?\n"
@@ -24,9 +24,9 @@ def greet(name, lang_choice):
 
     greeting = None
 
-    if(lang_choice == 2):
+    if lang_choice == 2:
         greeting = "Hola " + name
-    elif(lang_choice == 3):
+    elif lang_choice == 3:
         greeting = "Olá " + name
     else:
         greeting = "Hello " + name

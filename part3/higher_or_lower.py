@@ -18,6 +18,7 @@ def evaluate(random_number, users_guess):
     else:
         print("Too high.")
 
+
 random_number = generate_random_number()
 users_guess = ask_for_input()
 evaluate(random_number, users_guess)
