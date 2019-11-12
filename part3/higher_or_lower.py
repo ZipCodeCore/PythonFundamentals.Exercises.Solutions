@@ -11,9 +11,9 @@ def ask_for_input():
 
 
 def evaluate(random_number, users_guess):
-    if(users_guess == random_number):
+    if users_guess == random_number:
         print("You got it.")
-    elif(users_guess < random_number):
+    elif users_guess < random_number:
         print("Too low.")
     else:
         print("Too high.")
