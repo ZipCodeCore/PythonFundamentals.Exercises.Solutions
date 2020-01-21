@@ -1,4 +1,7 @@
-def exponentiate(a, b):
+def exponentiate(a: int, b: int) -> int:
+    """
+    This function takes two integers (a and b) and returns the value of int a raised to the power of b.
+    """
     return a ** b
 
 
@@ -7,6 +10,9 @@ cube = lambda x: exponentiate(x, 3)
 
 
 def raise_to_fourth_power(x):
+    """
+    Given an integer, this function will raise it to the 4th power
+    """
     return exponentiate(x, 4)
 
 
