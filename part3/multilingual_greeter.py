@@ -1,4 +1,4 @@
-def language_input():
+def language_input() -> int:
     print("Please choose a language: ")
     print("1 - English")
     print("2 - Spanish")
@@ -6,7 +6,7 @@ def language_input():
     return int(input())
 
 
-def name_input(lang_choice):
+def name_input(lang_choice: int) -> str:
 
     prompt = None
 
@@ -20,7 +20,7 @@ def name_input(lang_choice):
     return input(prompt)
 
 
-def greet(name, lang_choice):
+def greet(name: str, lang_choice: int) -> None:
 
     greeting = None
 

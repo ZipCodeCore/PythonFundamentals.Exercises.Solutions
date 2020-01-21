@@ -1,16 +1,16 @@
 from random import randrange
 
 
-def generate_random_number():
+def generate_random_number() -> int:
     return randrange(10)
 
 
-def ask_for_input():
+def ask_for_input() -> int:
     guess = input("Give me a number\n")
     return int(guess)
 
 
-def evaluate(random_number, users_guess):
+def evaluate(random_number: int, users_guess: int) -> None:
     if users_guess == random_number:
         print("You got it.")
     elif users_guess < random_number:
