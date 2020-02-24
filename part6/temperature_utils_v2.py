@@ -22,18 +22,42 @@ def c_to_f(celsius_temp: float) -> float:
 
 
 def c_to_k(celsius_temp: float) -> float:
+    """
+    Given a float representing a temperature in celsius, return the corresponding value in kelvin.
+
+    :param celsius_temp: A float representing a temperature in celsius
+    :return:  A float representing the corresponding value of the celsius_temp parameter in kelvin
+    """
     return round(celsius_temp + 273.15, 2)
 
 
 def k_to_c(kelvin_temp: float) -> float:
+    """
+    Given a float representing a temperature in kelvin, return the corresponding value in celsius.
+
+    :param kelvin_temp: A float representing a temperature in kelvin
+    :return:  A float representing the corresponding value of the kelvin_temp parameter in celsius
+    """
     return round(kelvin_temp - 273.15, 2)
 
 
 def f_to_k(fahrenheit_temp: float) -> float:
+    """
+    Given a float representing a temperature in fahrenheit, return the corresponding value in kelvin.
+
+    :param fahrenheit_temp: A float representing a temperature in fahrenheit
+    :return:  A float representing the corresponding value of the fahrenheit_temp parameter in kelvin
+    """
     return round(((fahrenheit_temp - 32) / 1.8) + 273.15, 2)
 
 
 def k_to_f(kelvin_temp: float) -> float:
+    """
+    Given a float representing a temperature in kelvin, return the corresponding value in fahrenheit.
+
+    :param kelvin_temp: A float representing a temperature in kelvin
+    :return:  A float representing the corresponding value of the kelvin_temp parameter in fahrenheit
+    """
     return round(((kelvin_temp - 273.15) * 1.8) + 32, 2)
 
 
