@@ -1,10 +1,10 @@
 import json
 import os
 import pickle
+from typing import Dict
 
 
-def read_json(file_path):
-    json_input = None
+def read_json(file_path: str) -> Dict:
     with open(file_path) as f:
         json_input = json.load(f)
     return json_input
@@ -32,10 +32,7 @@ def load_pickle(file_path):
 
 
 if __name__ == '__main__':
-    # file_path = os.path.join('./', 'data', 'mario.json')
-    # json = read_json(file_path)
-    # print(json)
-
+    pass
     # file_path = os.path.join('./', 'data')
     # result = read_all_json_files(file_path)
     # write_pickle("output.pickle", result)
