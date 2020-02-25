@@ -33,8 +33,6 @@ def load_pickle(file_path):
 
 if __name__ == '__main__':
     pass
-    # file_path = os.path.join('./', 'data')
-    # result = read_all_json_files(file_path)
     # write_pickle("output.pickle", result)
     # print(result)
 
