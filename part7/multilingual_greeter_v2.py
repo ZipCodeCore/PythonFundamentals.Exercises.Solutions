@@ -147,6 +147,10 @@ def greet(name: str, greetings_options: Dict[int, str], lang_choice: int) -> Non
     print(greeting)
 
 
+##############################
+# Modes functions
+##############################
+
 def user_mode():
     print("Entering user mode...")
     chosen_lang = prompt_options("Please choose a language: ", lang_dict)
@@ -154,10 +158,6 @@ def user_mode():
     chosen_name = name_input(selected_prompt)
     greet(chosen_name, greetings_dict, chosen_lang)
 
-
-##############################
-# Modes functions
-##############################
 
 def admin_mode():
     print("Entering admin mode...")
