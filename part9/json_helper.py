@@ -30,3 +30,15 @@ def load_pickle(file_path):
         data = pickle.load(handler)
     return data
 
+
+if __name__ == "__main__":
+
+    # Part 2 Proof
+
+    content = read_all_json_files('./data/marvel')
+    print(content)
+
+    write_pickle("marvel.pickle", content)
+    marvel_content = load_pickle("marvel.pickle")
+    print(marvel_content)
+
