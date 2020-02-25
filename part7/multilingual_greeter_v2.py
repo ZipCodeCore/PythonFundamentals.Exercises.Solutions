@@ -11,7 +11,6 @@ admin_mode_options = {
     2: "Edit greeting",
 }
 
-
 # Populate this dictionary with at least two languages.
 # Use integers for keys and strings for values.
 # Example: Key = 1. Value = 'English'.
@@ -40,6 +39,7 @@ greetings_dict = {
 ##############################
 # Control-flow functions
 ##############################
+
 def print_dict(dict: Dict[int, str]) -> None:
     """
     Given a dictionary, this functions iterates through the values and prints them out.
@@ -98,12 +98,12 @@ def add_language(*args):
     name_prompt_dict[new_lang_id] = new_lang_prompt
     greetings_dict[new_lang_id] = new_lang_greeting
 
+
 def edit_greeting():
     print("editing greeting...")
     lang_to_edit = prompt_options("Please choose a language to edit: ", lang_dict)
     new_greeting = input("What should the new greeting be?")
     greetings_dict[lang_to_edit] = new_greeting
-
 
 
 ##############################
@@ -147,29 +147,40 @@ def greet(name: str, greetings_options: Dict[int, str], lang_choice: int) -> Non
     print(greeting)
 
 
+def user_mode():
+    print("Entering user mode...")
+    chosen_lang = prompt_options("Please choose a language: ", lang_dict)
+    selected_prompt = f"{get_name_input(name_prompt_dict, chosen_lang)} \n"
+    chosen_name = name_input(selected_prompt)
+    greet(chosen_name, greetings_dict, chosen_lang)
+
+
+##############################
+# Modes functions
+##############################
+
+def admin_mode():
+    print("Entering admin mode...")
+    chosen_action = prompt_options("Please choose an action.", admin_mode_options)
+
+    if(chosen_action == 1):
+        add_language()
+    elif(chosen_action == 2):
+        edit_greeting()
+
+
 def home():
     chosen_mode = prompt_options("Please choose a mode: ", modes_dict)
 
     if(chosen_mode == 1):
-        print("Entering user mode...")
-        chosen_lang = prompt_options("Please choose a language: ", lang_dict)
-        selected_prompt = f"{get_name_input(name_prompt_dict, chosen_lang)} \n"
-        chosen_name = name_input(selected_prompt)
-        greet(chosen_name, greetings_dict, chosen_lang)
-
+        user_mode()
     elif (chosen_mode == 2):
-        print("Entering admin mode...")
-        chosen_action = prompt_options("Please choose an action.", admin_mode_options)
-
-        if(chosen_action == 1):
-            add_language()
-        elif(chosen_action == 2):
-            edit_greeting()
-
+        admin_mode()
     else: 
         print("Invalid mode...")
-    
+
     home()
+
 
 if __name__ == '__main__':
     home()
