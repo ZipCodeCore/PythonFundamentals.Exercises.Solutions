@@ -21,7 +21,7 @@ def read_all_json_files(json_root):
 
 
 def write_pickle(file_path, data):
-    with open("output.pickle", "wb") as handler:
+    with open(file_path, "wb") as handler:
         pickle.dump(data, handler)
 
 
@@ -30,12 +30,3 @@ def load_pickle(file_path):
         data = pickle.load(handler)
     return data
 
-
-if __name__ == '__main__':
-    pass
-    # write_pickle("output.pickle", result)
-    # print(result)
-
-    # file_path = os.path.join('output.pickle')
-    # data = load_pickle(file_path)
-    # print(data)
