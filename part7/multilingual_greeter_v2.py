@@ -69,10 +69,7 @@ def choice_is_valid(dict_in: Dict[int, str], choice_in: int) -> bool:
     :param choice_in: An integer representing the value the user selected
     :return: A boolean representing the validity of the lang_choice
     """
-    if dict_in.get(choice_in) is not None:
-        return True
-    else:
-        return False
+    return dict_in.get(choice_in) is not None
 
 
 def prompt_options(prompt: str, dict_in: Dict[int, str]) -> int:
@@ -100,10 +97,13 @@ def add_language(*args):
     lang_dict[new_lang_id] = new_lang_desc
     name_prompt_dict[new_lang_id] = new_lang_prompt
     greetings_dict[new_lang_id] = new_lang_greeting
-    home()
 
 def edit_greeting():
     print("editing greeting...")
+    lang_to_edit = prompt_options("Please choose a language to edit: ", lang_dict)
+    new_greeting = input("What should the new greeting be?")
+    greetings_dict[lang_to_edit] = new_greeting
+
 
 
 ##############################
@@ -168,6 +168,8 @@ def home():
 
     else: 
         print("Invalid mode...")
+    
+    home()
 
 if __name__ == '__main__':
     home()
