@@ -57,4 +57,36 @@ zc_bank.balance_inquiry(1001)
 
 Create a program called *persistent_small_town_teller.py*
 
+Declare a **PersistenceUtils** class with the following static methods:
+* write_pickle
+* load_pickle
+
+Append the following methods to the **Bank** class:
+* save_data
+* load_data
+
 This application should extend exercise one so that all of the customers and accounts persist between restarts.
+
+From an interactive terminal:
+* Create customers and accounts. 
+* Save the data using the save_data method.
+* Exit the session.
+* Create a new session.
+* Validate there are no customers and no accounts.
+* Load the saved data using the load_data method.
+* Validate the persistence is working.
+
+```python
+from persistent_small_town_teller import Person, Account, Bank
+
+zc_bank = Bank()
+zc_bank.customers
+# {}
+zc_bank.accounts
+# {}
+zc_bank.load_data()
+zc_bank.customers
+# {1: <persistent_small_town_teller.Person object at 0x1098e6a90>}
+zc_bank.accounts
+# {1001: <persistent_small_town_teller.Account object at 0x1099e04d0>}
+```
