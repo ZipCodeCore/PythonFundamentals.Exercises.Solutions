@@ -53,18 +53,19 @@ class Bank:
     def deposit(self, account_id: int, amount: float):
         if account_id in self.accounts:
             account = self.accounts.get(account_id)
-            account.balance += amount
+            account.balance += round(amount, 2)
         else:
             raise ValueError(f"Account with id {account_id} does not exist.")
 
     def withdrawal(self, account_id, amount: float):
         if account_id in self.accounts:
             account = self.accounts.get(account_id)
-            account.balance -= amount
+            account.balance -= round(amount, 2)
 
     def balance_inquiry(self, account_id: int):
         if account_id in self.accounts:
-            return self.accounts.get(account_id).balance
+            balance = self.accounts.get(account_id).balance
+            return round(balance, 2)
         else:
             raise ValueError(f"Account with id {account_id} does not exist.")
 
