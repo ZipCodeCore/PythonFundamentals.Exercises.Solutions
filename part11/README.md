@@ -7,7 +7,36 @@
 
 ## Exercise 1
 
-Create a program called *shapes.py*
+Create a program called **shapes.py*
+
+Declare a class called **Rectangle**
+
+Rectangle class must have the following attributes:
+* length
+* width
+
+Rectangle class must also have the following methods:
+* area
+* perimeter
+
+
+Declare a class called **Square** 
+* This class must inherit from the Rectangle class.
+
+
+```python
+import shapes
+rect = shapes.Rectangle(2, 4)
+rect.area()
+# 8
+
+square = shapes.Square(8)
+square.area()
+# 64
+
+square.perimeter()
+# 32
+```
 
 ## Exercise 2 
 
