@@ -9,7 +9,7 @@ square = lambda x: exponentiate(x, 2)
 cube = lambda x: exponentiate(x, 3)
 
 
-def raise_to_fourth_power(x):
+def raise_to_fourth_power(x: int) -> int:
     """
     Given an integer, this function will raise it to the 4th power
     """
