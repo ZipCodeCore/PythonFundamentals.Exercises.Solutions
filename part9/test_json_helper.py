@@ -6,9 +6,8 @@ import json_helper
 
 class JsonHelperTest(unittest.TestCase):
 
-    @classmethod
-    def setUpClass(cls) -> None:
-        cls._json_stubs = [
+    def setUp(self) -> None:
+        self._json_stubs = [
             {
                 "name": "Mario",
                 "neutral_special": "Fireball",

@@ -24,10 +24,7 @@ def input_has_substring(str_in: str, sub_str_in: str) -> bool:
     """
     This function determines if the substring exists within the string. Returns True or False.
     """
-    if str_in.find(sub_str_in) == -1:
-        return False
-    else: 
-        return True
+    return sub_str_in in str_in
 
 
 def substring(str_in: str, start: int, stop: int) -> str:
