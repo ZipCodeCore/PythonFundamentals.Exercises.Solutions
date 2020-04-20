@@ -67,3 +67,30 @@ Extend the functionality to meet the following requirements:
 * If a user's guess is incorrect, they get to keep guessing until they get it right.
 
 ![higher_or_lower_demo](higher_or_lower_demo.gif)
+
+
+## Exercise 5 
+
+[Factorials](https://www.mathsisfun.com/numbers/factorial.html) are used to count permutations.
+
+Create a program called *factorial.py*.
+
+**Requirements**
+
+* Given a number (x), determine the value of x!
+* use recursion
+
+| x   |               | result | 
+| --- | ------------- | ------ |
+| 0!  |               | 1      |
+| 1!  | 1 * 1         | 1      | 
+| 2!  | 2 * 1         | 2      |
+| 3!  | 3 * 2 * 1     | 6      |
+| 4!  | 4 * 3 * 2 * 1 | 24     |
+| 5!  | 5 * 3 * 2 * 1 | 120    |
+| ... | ...           | ...    |
+
+**Constraints**  
+
+n >= 0
+n < 995
