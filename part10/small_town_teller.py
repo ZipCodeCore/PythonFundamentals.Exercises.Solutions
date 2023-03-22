@@ -14,7 +14,7 @@ class Person:
 
 class Account:
 
-    def __init__(self, account_number, account_type, account_owner):
+    def __init__(self, account_number, account_type, account_owner: Person):
         self.number: int = account_number
         self.type: str = account_type
         self.owner: Person = account_owner

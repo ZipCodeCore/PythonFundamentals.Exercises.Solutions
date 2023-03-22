@@ -20,7 +20,7 @@ def read_all_json_files(json_root):
     return result
 
 
-def write_pickle(file_path, data):
+def write_pickle(file_path: str, data: Dict):
     with open(file_path, "wb") as handler:
         pickle.dump(data, handler)
 

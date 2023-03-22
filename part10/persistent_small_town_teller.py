@@ -70,7 +70,10 @@ class Bank:
         else:
             raise ValueError(f"Account with id {account_id} does not exist.")
 
+# class Persistent_SmallTown_Teller(Bank):
+
     def save_data(self):
+        # create folder "our-bank"
         PersistenceUtils.write_pickle("customers.pickle", self.customers)
         PersistenceUtils.write_pickle("accounts.pickle", self.accounts)
 
